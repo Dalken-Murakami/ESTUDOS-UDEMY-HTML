@@ -1,3 +1,4 @@
+<div wm-slider>
 <p>
     <img src="http://files.cod3r.com.br/curso-web/imagem1.jpg" alt="camisas1"
     width="513" height="342"
@@ -35,6 +36,7 @@
         <img src="http://files.cod3r.com.br/curso-web/logo-estreira.png" alt="logo">
     </picture>
 </p>
+</div>
 <style>
     .circular {
     width: 513px;
@@ -56,4 +58,16 @@
     background-size: 200%;
 }
 </style>
-
+<script>
+    function mover (elem,inicio, fim, passo, callback){
+        const novoInicio = inicio - passo
+        if(novoInicio >= fim) {
+            elem.style.left = novoInicio + 'px'
+            setTimeout (() =>mover(elem, novoInicio, fim, callbacl),7)
+        } else {
+            callback()
+        }
+    }
+    const p = document.querySelector('[wm-slider] > p')
+    p.style.display = 'block'
+</script>
