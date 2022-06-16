@@ -1,6 +1,7 @@
 <h1>formulário</h1>
 
 <form action="http://127.0.0.1:5500/usuarios" method="POST">
+    <input type="hidden" name="id" value="3">
     <input type="text" name="nome">
     <input type="password" name="Senha">
     <textarea name="bio" id="" cols="30" rows="10"></textarea>
@@ -27,7 +28,8 @@
         <option value="js4" class="value">js4</option>
 
     </select>
-    <button>Incluir</button>
+    <button formaction="http://127.0.0.1:5500/usuarios">Incluir</button>
+    <button formaction="http://127.0.0.1:5500/usuarios/3">Alterar</button>
 
 </form>
 
